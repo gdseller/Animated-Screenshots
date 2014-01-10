@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Animated Screenshots Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' type='text/css' href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css' />
+    <link rel="stylesheet" type="text/css" href="animatedScreenshots.css" />
+</head>
+<body style='margin: 0px;'>
+<br>
+
+<div style='width: 30%; float: left;'> <!-- Set to any width...even 100%. If you already have a wrapping div, you can leave this out. -->
+<div class='ipadWrapper'><div><div>
+<img src="//webpics.us/api?key=120c781cc04be8d4614ae8f6dd3e11c6&amp;token=8e8d0ad873497c36667ccc9088e90c4ad54c4779&amp;url=http://shopify.com&amp;viewport=1200xfull&amp;width=775" class="animatedIPAD">
+</div></div></div>
+</div>
+
+<div style='width: 20%; margin-left: 2%; float: left;'> <!-- Set to any width...even 100%. If you already have a wrapping div, you can leave this out. -->
+<div class='iphoneWrapper'><div><div>
+<img src="//webpics.us/api?key=120c781cc04be8d4614ae8f6dd3e11c6&amp;token=8e8d0ad873497c36667ccc9088e90c4ad54c4779&amp;url=http://shopify.com&amp;viewport=320xfull&amp;width=320" class="animatedIPHONE">
+</div></div></div>
+</div>
+
+<div style='width: 46%; margin-left: 2%; float: left;'>
+	<div style='background: #f3f3f3; color: #555; padding: 20px;'>
+		<h1 style='color: #428bca;font-weight: bold;'>Animated Screenshots jQuery Plugin</h1>
+		<h2>Easy to use, responsive, and FREE!</h2>
+		<br>
+		<h3><i class='glyphicon glyphicon-heart'></i> What it does:</h3>
+		<div style='margin-left: 10px;'>
+			This plugin will animate a full height screenshot (or any image) within a parent div to simulate a user scrolling the page.
+		</div>
+		<br>
+		<div style='margin-left: 10px;'>
+			<a href='animatedScreenshots_v1.zip' class='btn btn-primary'>Download the Demo <i class='glyphicon glyphicon-download-alt'></i></a>
+			<a class='btn btn-success' href='https://webpics.us' target='_blank'>Get Full-Height Screenshots <i class='glyphicon glyphicon-camera'></i></a>
+		</div>
+		<br>
+		<h3><i class='glyphicon glyphicon-flash'></i> Usage:</h3>
+		<div style='margin-left: 10px;'>
+			&lt;!-- Include the CSS --&gt;<br>
+			&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;animatedScreenshots.css&quot; /&gt;<br>
+			<br>
+			&lt;!-- iPad --&gt;<br>
+			&lt;div style='width: 775px'&gt; &lt;!-- Set to any width (percent, pixel, etc)--&gt;<br>
+			&lt;div class='ipadWrapper'&gt;&lt;div&gt;&lt;div&gt;<br>
+			&lt;img src=&quot;URL/TO/IMAGE.png&quot; class=&quot;animatedIPAD&quot;&gt; &lt;!-- Swap out with your Image --&gt;<br>
+			&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;<br>
+			<br>
+			&lt;!-- iPhone --&gt;<br>
+			&lt;div style='width: 320px'&gt; &lt;!-- Set to any width (percent, pixel, etc) --&gt;<br>
+			&lt;div class='iphoneWrapper'&gt;&lt;div&gt;&lt;div&gt;<br>
+			&lt;img src=&quot;URL/TO/IMAGE.png&quot; class=&quot;animatedIPHONE&quot;&gt; &lt;!-- Swap out with your Image --&gt;<br>
+			&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;<br>
+			&lt;/div&gt;<br>
+			<br>
+			&lt;!-- Include the jQuery --&gt;<br>
+			&lt;script src=&quot;animatedScreenshots.min.js&quot;&gt;&lt;/script&gt;<br>
+			<br>
+			&lt;!-- Initialize the Plugin --&gt;<br>
+			&lt;script&gt;<br>
+			$(function(){<br>
+				$('.animatedIPAD').animateScreenshot({repeat: true, speed: 1000, timeout: 500});<br>
+				$('.animatedIPHONE').animateScreenshot({repeat: true, speed: 10000, timeout: 500});<br>
+			});<br>
+			&lt;/script&gt;
+		</div>
+		<br>
+		<h3><i class='glyphicon glyphicon-wrench'></i> Options:</h3>
+		<div style='margin-left: 10px;'>
+			<b>Repeat</b>: Boolean<br>
+			<i>Scroll the image once (set to false), or unlimited times (set to true)</i><br>
+			<b>Speed</b>: Number<br>
+			<i>Time in ms that it takes to scroll the page once</i><br>
+			<b>Timeout</b>: Number<br>
+			<i>Time in ms that it delays before the next scroll (only applies if repeat: true)</i>
+		</div>
+		<br>
+		<h3><i class='glyphicon glyphicon-warning-sign'></i> Dependencies:</h3>
+		<div style='margin-left: 10px;'>
+			<u>Requires jQuery</u>! <b><i>If jQuery is not defined before the plugin, it will be automatically added.</i></b> Don't add jQuery to your page twice. It can cause mucho problemos.
+		</div>
+		<br><br>
+		<h3><i class='glyphicon glyphicon-info-sign'></i> License:</h3>
+		<div style='margin-left: 10px;'>
+			Copyright (c) 2013 <a href='http://flwebsites.biz' target='_blank'>Versatility Werks</a><br><br>
+
+			Permission is hereby granted, free of charge, to any person obtaining a copy
+			of this software and associated documentation files (the "Software"), to deal
+			in the Software without restriction, including without limitation the rights
+			to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+			copies of the Software, and to permit persons to whom the Software is
+			furnished to do so, subject to the following conditions:
+			<br><br>
+			The above copyright notice and this permission notice shall be included in
+			all copies or substantial portions of the Software.
+			<br><br>
+			THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+			IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+			FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+			AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+			LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+			OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+			THE SOFTWARE.<br>
+		</div>
+	</div>
+	<br>
+</div>
+
+<div style='clear: both;'></div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="animatedScreenshots.min.js"></script>
+
+<script>
+/* Initialize animateScreenshot(s) */
+$(function(){
+	$('.animatedIPAD').animateScreenshot({speed: 4000, timeout: 500});
+	$('.animatedIPHONE').animateScreenshot({speed: 20000, timeout: 500});
+});
+
+/* Google Analyticals for Trackingz Peeps */
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40545657-1', 'webpics.us');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-52b02c214fce3dc2"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'right',
+      'numPreferredServices' : 5
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+</body>
+</html>

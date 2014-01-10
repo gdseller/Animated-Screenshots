@@ -1,0 +1,23 @@
+.ipadWrapper{
+	width: 100%; height: 0px; padding-bottom: 138.6%; position: relative; background-image: url(ipad.png); background-postion: center center; background-size: 100% 100%; background-repeat: no-repeat; margin: 0px auto;
+}
+.ipadWrapper > div{
+	position: absolute; width: 79.46%; height: 76.29%; border: 0px; left: 10.26%; z-index: 2; top: 8.148%;
+}
+.ipadWrapper > div > div{
+	margin: 0px auto; padding: 0px; width: 100%; height: 0px; padding-bottom: 132%; overflow: hidden;
+}
+
+.iphoneWrapper{
+	width: 100%; height: 0px; padding-bottom: 205.65%; position: relative; background-image: url(iphone.png); background-postion: center center; background-size: 100% 100%; background-repeat: no-repeat; margin: 0px auto;
+}
+.iphoneWrapper > div{
+	position: absolute; width: 82.26%; height: 63%; border: 0px; left: 8.74%; z-index: 2; top: 13.12%;
+}
+.iphoneWrapper > div > div{
+	margin: 0px auto; padding: 0px; width: 100%; height: 0px; padding-bottom: 157%; overflow: hidden; 
+}
+
+.animatedIPAD, .animatedIPHONE{
+	width: 100%; height: auto;
+}
